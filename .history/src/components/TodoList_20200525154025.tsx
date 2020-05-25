@@ -1,19 +1,17 @@
 import React from "react";
 import { Todo } from "../interfaces/todo.interface";
-import "./TodoList.styles.css";
 
 interface TodoListProps {
   items: Todo[];
-  todoDeleteHandler: (id: string) => void;
 }
 
-const TodoList: React.FC<TodoListProps> = ({ items, todoDeleteHandler }) => {
+const TodoList: React.FC<TodoListProps> = ({ items }) => {
   return (
     <ul>
       {items.map((item) => (
         <li key={item.id}>
           <span>{item.text}</span>
-          <button onClick={() => todoDeleteHandler(item.id)}>DELETE</button>
+          <button>DELETE</button>
         </li>
       ))}
     </ul>

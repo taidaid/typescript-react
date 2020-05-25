@@ -23,7 +23,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <NewTodo todoAddHandler={todoAddHandler} />
-      <TodoList items={todos} todoDeleteHandler={todoDeleteHandler} />
+      <TodoList items={todos} />
     </div>
   );
 };
